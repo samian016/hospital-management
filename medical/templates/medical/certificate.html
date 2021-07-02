@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Certificate</title>
+<style>
+
+
+        h1 {
+            color: red;
+        }
+        h3{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        {% if patient.status == "released" or patient.status == "Released" or paitent.physical_con == "Death" or paitent.physical_con == "death" %}
+            <h1>Daffodil medical</h1>
+            <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076,01303263574 || Hot-Line: 01722469841</p>
+                Daffodil medical confirms that "{{ patient.first_name }} {{ patient.second_name }}" died on {{ patient.death_date }}.
+            <br>He/She was born on {{ patient.date_of_birth }}, Sex: {{ patient.sex }}, Marital status: {{ patient.maritalS }}.
+            <br>Number of children: {{ patient.childrenN }}, Nationality: {{ patient.nationality }}, Occupation: {{ patient.occupation }},
+            <br>Religion: {{ patient.religion }}, Address: {{ patient.residence }}, Cause of His/Her death was: {{ patient.disease }}.
+            <br>
+            <br>
+            <br>
+                Signature of Doctor:    _______________
+            <br>
+            <br>
+        {% else %}
+            <h4>Patient under treatment</h4>
+        {% endif %}
+    {% else %}
+        <h1>Daffodil medical</h1>
+            <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076,01303263574 || Hot-Line: 01722469841</p>
+        <h2>You have to login first...</h2>
+        <a href="/login/">login</a><br>
+    {% endif %}
+<div>
+    <a href="/medical/patients/">Back</a>
+    {% for message in messages %}
+        <h3>{{ message }}</h3>
+    {% endfor %}
+</div>
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Profile</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+    <h2>Are you sure want to delete this profile ?</h2>
+    <h4> Patient: {{ patient.first_name }} {{ patient.second_name }}</h4>
+    <h5> Guardian: {{ patient.guardian_first_name }} {{ patient.guardian_second_name }}</h5>
+    <form method='POST' name="delete">
+    {% csrf_token %}
+        <button class="btn btn-danger" type="submit">Delete</button>
+    </form>
+{% else %}
+     <h3>You have to login first...</h3>
+     <a href="/login/">login</a><br>
+ {% endif %}
+
+<div>
+<h3><a href="/medical/patient/id={{patient.id}}">Back</a></h3>
+    {% for message in messages %}
+        <h3>{{ message }}</h3>
+    {% endfor %}
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update patient profile</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+    <form method="POST" name="Update">
+        {% csrf_token %}
+        <div>
+        <h3>Update Patient Profile</h3>
+        </div>
+        <label>Name: {{ patient.first_name }} {{ patient.second_name }}</label><br>
+        <label>Patient birth date: {{patient.date_of_birth}}</label><br>
+
+        <label>Patient residence: {{ patient.residence }}</label><br>
+
+        <lebel>Guardian name:</lebel>
+        <div>
+            First name: <input type="text" name="g_first_n" value="{{ patient.guardian_first_name }}">
+        </div>
+        <div>
+            Last name: <input type="text" name="g_second_n" value="{{ patient.guardian_second_name }}">
+        </div>
+
+        <label>Telephone:</label>
+        <div>
+            <input type="text" name="telephone" value="{{ patient.telephone }}">
+        </div>
+        <label>Patient's disease or symptoms:</label>
+        <div>
+            <input type="text" name="disease" value="{{ patient.disease }}">
+        </div>
+
+        <label>Ward name:</label>
+        <div>
+             <input type="text" name="ward" value="{{ patient.ward }}">
+        </div>
+        <label>Bed number:</label>
+        <div>
+            <input type="text" name="bed" value="{{ patient.bed }}">
+        </div>
+
+        <label>Care note:</label>
+        <div>
+            <input type="text" name="care" value="{{ patient.care_note }}">
+        </div>
+        <label>Physical condition</label>
+        <div>
+            <input type="text" name="physical" value="{{ patient.physical_con }}">
+        </div>
+        <div>
+            <button class="btn btn-dark" type="submit">Update</button>
+        </div>
+
+     </form>
+{% else %}
+     <h3>You have to login first...</h3>
+     <a href="/login/">login</a><br>
+ {% endif %}
+
+<div>
+<h3><a href="/medical/patient/id={{patient.id}}">Back</a></h3>
+    {% for message in messages %}
+        <h3>{{ message }}</h3>
+    {% endfor %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Patient</title>
+    <style>
+
+
+        h1 {
+            color: red;
+        }
+        h3{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+ {% if user.is_authenticated %}
+<h1>Daffodil medical</h1>
+            <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076,01303263574 || Hot-Line: 01722469841</p>
+      <h2>Patient Admission form</h2>
+      <form method="post">
+          {% csrf_token %}
+
+          <lebel>Date:</lebel>
+          <br>
+            <input type="date" name="date"placeholder=" "><br>
+            <h4>Patient information</h4>
+          <lebel>Patient name:</lebel>
+          <br>
+            First name:<input type="text" name="first" placeholder="First name"><br>
+            Last name:<input type="text" name="second" placeholder="Second name"><br>
+
+            Patient birth date:<input type="date" name="dob"placeholder=" "><br>
+
+          Sex:<input type="text" name="sex" placeholder=" "><br>
+
+          Patient marital status:<input type="text" name="maritalS" placeholder=" "><br>
+
+          Number of children:<input type="number" name="children" placeholder=" "><br>
+
+          Patient residence:<input type="text" name="residence" placeholder=" "><br>
+
+          Nationality:<input type="text" name="nationality" placeholder=" "><br>
+
+          Patient occupation:<input type="text" name="occupation" placeholder=" "><br>
+
+          Patient Religion:<input type="text" name="religion" placeholder=" "><br>
+          <h4>Administration</h4>
+          <lebel>Guardian name:</lebel>
+          <br>
+          First name:<input type="text" name="g_first_name" placeholder="Guardian's first name"><br>
+          Last name:<input type="text" name="g_second_name" placeholder="Guardian's second name"><br>
+
+          Guardian contact number:<input type="text" name="telephone" placeholder=" "><br>
+
+          Patient's disease or symptoms:<input type="text" name="disease" placeholder=" "><br>
+          <lebel>Admitted in:</lebel>
+          <br>
+
+          Ward name:<input type="text" name="ward" placeholder=" "><br>
+
+          Bed Number:<input type="number" name="bed" placeholder=" "><br>
+
+          Care note:<textarea name="care_note" placeholder=" " cols="30" rows="20"></textarea><br>
+          <h4>History</h4>
+
+          Transferred from:<input type="text" name="transfer_from" placeholder=" "><br>
+
+          Pulse rate:<input type="number" name="pulse" placeholder=" "><br>
+
+          Blood pressure:<input type="number" name="bloodP" placeholder=" "><br>
+
+          Respiration rate:<input type="number" name="respiration" placeholder=" "><br>
+
+          Temperature:<input type="number" name="temperature" placeholder=" "><br>
+
+          Physical condition:<input type="text" name="physical_con" placeholder=" "><br>
+          <lebel>Note: Check all the information carefully!!!</lebel>
+          <br>
+          <input type="submit"><br>
+          <a href="/medical/m/">Back</a><br>
+
+      </form>
+ {% else %}
+     <h1>Daffodil medical</h1>
+            <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076,01303263574 || Hot-Line: 01722469841</p>
+     <h3>You have to login first...</h3>
+     <a href="/login/">login</a><br>
+
+
+ {% endif %}
+<div>
+    {% for message in messages %}
+        <h3>{{ message }}</h3>
+    {% endfor %}
+</div>
+
+</body>
+</html>

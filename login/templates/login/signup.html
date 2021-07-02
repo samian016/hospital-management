@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <style>
+
+
+        h1{
+            color: red;
+        }
+        h3{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    {% if user.is_authenticated %}
+
+        <h1>Daffodil medical</h1>
+            <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076,01303263574 || Hot-Line: 01722469841</p>
+        <h4>You have to logout this account first!!!</h4><br>
+        <a href="/">Home</a><br>
+    {% else %}
+        <h1>Daffodil medical</h1>
+            <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076,01303263574 || Hot-Line: 01722469841</p>
+          <h4>Signup for new medical assistant</h4>
+    <form method="post">
+         {% csrf_token %}
+             First name:<input type="text" name="first_name" placeholder=" "><br>
+             Last name:<input type="text" name="last_name" placeholder=" "><br>
+             Username:<input type="text" name="username" placeholder="Enter username you want"><br>
+             Email:<input type="email" name="email" placeholder=" "><br>
+             Password:<input type="password" name="password1" placeholder="Enter your password"><br>
+             Confirm password:<input type="password" name="password2" placeholder="Confirm password"><br>
+             <input type="submit"><br>
+             <a href="/login/">Login</a><br>
+             <a href="/">Home</a><br>
+    {% endif %}
+     </form>
+<div>
+    {% for message in messages %}
+        <h4>{{ message }}</h4>
+    {% endfor %}
+</div>
+
+</body>
+</html>

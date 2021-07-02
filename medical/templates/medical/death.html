@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Case summary</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        {% if patient.status == "Admitted" or patient.status == "admitted" %}
+            <form method="post">
+                {% csrf_token %}
+                <h3>Name: {{ patient.first_name }} {{ patient.second_name }}</h3>
+                Address: {{ patient.residence }}<br>
+                Birthday: {{ patient.date_of_birth }}<br>
+                Religion: {{ patient.religion }}<br>
+                Guardian: {{ patient.guardian_first_name }} {{ patient.guardian_second_name }}<br>
+                Guardian Telephone: {{ patient.telephone }}<br>
+                Marital status: {{ patient.maritalS }}<br>
+                Children number: {{ patient.childrenN }}<br>
+                <level>Admitted in:</level><br>
+                    Ward: {{ patient.ward }}<br>
+                    Bed: {{ patient.bed }}<br>
+                <level>Important:</level><br>
+                Disease: {{ patient.disease }}<br>
+                Status: {{ patient.status }}<br>
+                care note: {{ patient.care_note }}<br>
+                <br>
+                <br>
+
+                <label>Death date:</label>
+            <div>
+                <input type="date" name="de_date" value="{{ patient.death_date }}">
+            </div>
+                <label>Cause of death:</label>
+            <div>
+                <input type="text" name="cause" value="{{ patient.disease }}">
+            </div>
+            <div>
+                <button class="btn btn-dark" type="submit">Confirm</button>
+            </div>
+            </form>
+        {% endif %}
+
+
+{% endif %}
+<div>
+    <h3><a href="/medical/patient/id={{patient.id}}">Back</a></h3>
+    {% for message in messages %}
+        <h3>{{ message }}</h3>
+    {% endfor %}
+</div>
+</body>
+</html>
+{% endblock content %}

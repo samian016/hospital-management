@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LogIn</title>
+    <style>
+
+
+        h1 {
+            color: red;
+        }
+        h3{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+{% if user.is_authenticated %}
+    <h1>Daffodil medical</h1>
+            <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076,01303263574 || Hot-Line: 01722469841</p>
+    <h3>Already logged in as {{ user.first_name }}</h3>
+       <a href="/">Home</a><br>
+    {% else %}
+    <h1>Daffodil medical</h1>
+            <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076,01303263574 || Hot-Line: 01722469841</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="Username" placeholder="Your Username"><br>
+            <input type="password" name="Password" placeholder="Password"><br>
+            <input type="submit"><br>
+
+            <a href="/">Home</a><br>
+
+            <a href="/signup/">Signup</a><br>
+    {% endif %}
+
+
+</form>
+<div>
+    {% for message in messages %}
+        <h3>{{ message }}</h3>
+    {% endfor %}
+</div>
+</body>
+</html>

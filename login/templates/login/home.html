@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daffodil Medical</title>
+    <style>
+
+
+        h1 {
+            color: red;
+        }
+        h3{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    {% if user.is_authenticated %}
+        <h1>Daffodil medical</h1>
+    <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076, || Hot-Line: 0130326357401722469841</p>
+        <h3>Hello, {{ user.first_name }}</h3><br>
+        <a href="/medical/m">Medical</a><br>
+        <a href="/logout/">Logout</a><br>
+    {% else %}
+        <h1>Daffodil medical</h1>
+    <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076, || Hot-Line: 0130326357401722469841</p>
+    <h3>Login and signup approved only for Medical Assistant</h3><br>
+        <a href="/login/">login</a><br>
+        <a href="/signup/">Signup</a><br>
+    {% endif %}
+</body>
+</html>

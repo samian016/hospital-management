@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>{{ patient.first_name }} {{ patient.second_name }} Profile</title>
+<style>
+
+
+        h1 {
+            color: red;
+        }
+        h3{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <h1>Daffodil medical</h1>
+            <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076,01303263574 || Hot-Line: 01722469841</p>
+        <h3>Name: {{ patient.first_name }} {{ patient.second_name }}</h3>
+        Address: {{ patient.residence }}<br>
+        Birthday: {{ patient.date_of_birth }}<br>
+        Religion: {{ patient.religion }}<br>
+        Guardian: {{ patient.guardian_first_name }} {{ patient.guardian_second_name }}<br>
+        Guardian Telephone: {{ patient.telephone }}<br>
+        Marital status: {{ patient.maritalS }}<br>
+        Children number: {{ patient.childrenN }}<br>
+        <level>Admitted in:</level><br>
+                Ward: {{ patient.ward }}<br>
+                Bed: {{ patient.bed }}<br>
+        <level>Important:</level><br>
+        Disease: {{ patient.disease }}<br>
+        Status: {{ patient.status }}<br>
+        Release date: {{ patient.release_date }}<br>
+        care note: {{ patient.care_note }}<br>
+        Physical condition: {{ patient.physical_con }}
+        <br>
+        <br>
+        {% if patient.status == "Admitted" or patient.status == "admitted" %}
+            <h4><a type="button" class="btn btn-outline-dark" style="font-size: .7em;" href="/medical/update/id={{patient.id}}">Update this profile.</a>   </h4>
+            <h4><a type="button" class="btn btn-outline-dark" style="font-size: .7em;" href="/medical/release/id={{patient.id}}">Release patient.</a>   </h4>
+            <h4><a type="button" class="btn btn-outline-dark" style="font-size: .7em;" href="/medical/case-summary/id={{patient.id}}">Case summary.</a>   </h4>
+            <h4><a type="button" class="btn btn-outline-dark" style="font-size: .7em;" href="/medical/death/id={{patient.id}}">Death certificate.</a>   </h4>
+        {% endif %}
+
+        <h4><a type="button" class="btn btn-outline-danger" style="font-size: .7em;" href="/medical/delete/id={{patient.id}}"> Delete this profile.</a></h4>
+{% endif %}
+<div>
+    <a href="/medical/patients/">Back</a>
+    {% for message in messages %}
+        <h3>{{ message }}</h3>
+    {% endfor %}
+</div>
+</body>
+</html>
+{% endblock content %}

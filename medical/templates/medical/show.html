@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>{{ patient.first_name }} {{ patient.second_name }} case summary</title>
+<style>
+
+
+        h1 {
+            color: red;
+        }
+        h3{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        {% if patient.case_summary == "None" or patient.case_summary == "none" or patient.status == "Released" or patient.status == "released" or paitent.physical_con == "Death" or paitent.physical_con == "death" %}
+            <h3>No summary found</h3>
+        {% else %}
+            <h1>Daffodil medical</h1>
+            <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076,01303263574 || Hot-Line: 01722469841</p>
+            <h3>Name: {{ patient.first_name }} {{ patient.second_name }}</h3>
+            Address: {{ patient.residence }}<br>
+            Birthday: {{ patient.date_of_birth }}<br>
+            Religion: {{ patient.religion }}<br>
+            Guardian: {{ patient.guardian_first_name }} {{ patient.guardian_second_name }}<br>
+            Guardian Telephone: {{ patient.telephone }}<br>
+            Marital status: {{ patient.maritalS }}<br>
+            Children number: {{ patient.childrenN }}<br>
+            <level>Important:</level><br>
+                Disease: {{ patient.disease }}<br>
+                Status: {{ patient.status }}<br>
+                care note: {{ patient.care_note }}<br>
+                Ward: {{ patient.ward }}<br>
+                Summary: {{ patient.case_summary }}
+            <br>
+            <br>
+        {% endif %}
+    {% else %}
+        <h1>Daffodil medical</h1>
+            <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076,01303263574 || Hot-Line: 01722469841</p>
+        <h2>You have to login first...</h2>
+        <a href="/login/">login</a><br>
+    {% endif %}
+<div>
+    <a href="/medical/patients/">Back</a>
+    {% for message in messages %}
+        <h3>{{ message }}</h3>
+    {% endfor %}
+</div>
+</body>
+</html>
+{% endblock content %}

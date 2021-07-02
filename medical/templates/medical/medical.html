@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daffodil Medical</title>
+    <style>
+
+
+        h1 {
+            color: red;
+        }
+        h3{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daffodil medical</h1>
+            <p>Dhanmondi 27(Old Dhanmondi),Mirpur Road,Dhaka,Bangladesh <br>Telephone: 01647849152 || Emergency: 01985091080,017657880076, || Hot-Line: 0130326357401722469841</p>
+    {% if user.is_authenticated %}
+        <h3><a href="/">Home</a></h3>
+        <a href="{% url 'addP' %}">Add Patient</a><br>
+        <a href="{% url 'list' %}">Patient list</a><br>
+        <a href="/logout/">Logout</a><br>
+
+    {% else %}
+
+        <h2>You have to login first...</h2>
+        <a href="/login/">login</a><br>
+
+    {% endif %}
+<div>
+    {% for message in messages %}
+        <h3>{{ message }}</h3>
+    {% endfor %}
+</div>
+
+</body>
+</html>

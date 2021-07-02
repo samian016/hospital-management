@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Release Patient</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+    <form method="POST" name="Update">
+        {% csrf_token %}
+        <h3>Name: {{ patient.first_name }} {{ patient.second_name }}</h3>
+        Address: {{ patient.residence }}<br>
+        Birthday: {{ patient.date_of_birth }}<br>
+        Religion: {{ patient.religion }}<br>
+        Guardian: {{ patient.guardian_first_name }} {{ patient.guardian_second_name }}<br>
+        Guardian Telephone: {{ patient.telephone }}<br>
+        Marital status: {{ patient.maritalS }}<br>
+        Children number: {{ patient.childrenN }}<br>
+        <level>Admitted in:</level><br>
+                Ward: {{ patient.ward }}<br>
+                Bed: {{ patient.bed }}<br>
+        <level>Important:</level><br>
+        Disease: {{ patient.disease }}<br>
+        Status: {{ patient.status }}<br>
+        Release date: {{ patient.release_date }}<br>
+        care note: {{ patient.care_note }}<br>
+        <label>Release date:</label>
+        <div>
+            <input type="date" name="release" value="{{ patient.release_date }}">
+        </div>
+        <label>Status:</label>
+        <div>
+            <input type="text" name="status" value="Released">
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-dark" type="submit">Release</button>
+        </div>
+    </form>
+
+{% else %}
+
+     <h3>You have to login first...</h3>
+     <a href="/login/">login</a><br>
+ {% endif %}
+<div>
+<h3><a href="/medical/patient/id={{patient.id}}">Back</a></h3>
+    {% for message in messages %}
+        <h3>{{ message }}</h3>
+    {% endfor %}
+</div>
+</body>
+</html>
+{% endblock content %}

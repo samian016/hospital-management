@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c99d9bd7-c31d-41d3-b797-9b788f5c540e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fDmn5qUTNCtUNVvGsZxYYqvkSu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blogex-master" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\pr for dj\Hospital_Management" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\pr for dj\Hospital_Management\medical\templates\medical" />
+      <recent name="E:\pr for dj\Hospital_Management\medical" />
+      <recent name="E:\pr for dj\Hospital_Management\addpaitent" />
+      <recent name="E:\pr for dj\Hospital_Management\mdeical" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django server.Hospital_Management">
+    <configuration name="Hospital_Management" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Hospital_Management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server" nameIsGenerated="true">
+      <module name="Hospital_Management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.Unnamed" />
+      <item itemvalue="Django server.Hospital_Management" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c99d9bd7-c31d-41d3-b797-9b788f5c540e" name="Default Changelist" comment="" />
+      <created>1595761200968</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595761200968</updated>
+      <workItem from="1595761227430" duration="40265000" />
+      <workItem from="1595855107318" duration="1710000" />
+      <workItem from="1595876085352" duration="13392000" />
+      <workItem from="1595968846189" duration="11994000" />
+      <workItem from="1596041116186" duration="310000" />
+      <workItem from="1596206232070" duration="536000" />
+      <workItem from="1596386675089" duration="662000" />
+      <workItem from="1596553469270" duration="3856000" />
+      <workItem from="1597002250369" duration="2563000" />
+      <workItem from="1597080137264" duration="3280000" />
+      <workItem from="1597084172784" duration="9988000" />
+      <workItem from="1597246931486" duration="8705000" />
+      <workItem from="1597389416704" duration="7109000" />
+      <workItem from="1597418576291" duration="25682000" />
+      <workItem from="1597478290207" duration="14145000" />
+      <workItem from="1597568372119" duration="2615000" />
+      <workItem from="1597595134353" duration="14487000" />
+      <workItem from="1597613930393" duration="1145000" />
+      <workItem from="1597644178955" duration="1997000" />
+      <workItem from="1597655177950" duration="5111000" />
+      <workItem from="1597685997226" duration="4929000" />
+      <workItem from="1597730533396" duration="1832000" />
+      <workItem from="1599503972505" duration="34000" />
+      <workItem from="1599509023910" duration="2739000" />
+      <workItem from="1599744456484" duration="701000" />
+      <workItem from="1599910219889" duration="1309000" />
+      <workItem from="1600714351384" duration="1636000" />
+      <workItem from="1601614579222" duration="3094000" />
+      <workItem from="1601891657554" duration="469000" />
+      <workItem from="1601892176821" duration="420000" />
+      <workItem from="1601976658423" duration="327000" />
+      <workItem from="1601996491265" duration="1719000" />
+      <workItem from="1602307152580" duration="2031000" />
+      <workItem from="1602683191984" duration="2078000" />
+      <workItem from="1604302863997" duration="226000" />
+      <workItem from="1608696670288" duration="174000" />
+      <workItem from="1614193071345" duration="521000" />
+      <workItem from="1614879329664" duration="1526000" />
+      <workItem from="1621231005200" duration="626000" />
+      <workItem from="1622637437454" duration="2068000" />
+      <workItem from="1622669267452" duration="3075000" />
+      <workItem from="1622735088658" duration="67000" />
+      <workItem from="1622746164578" duration="436000" />
+      <workItem from="1623054511703" duration="76000" />
+      <workItem from="1623102828074" duration="46000" />
+      <workItem from="1623119860204" duration="115000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1623119975056">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1623119975056" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1623119861546">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1623119861546" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Hospital_Management/urls.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
